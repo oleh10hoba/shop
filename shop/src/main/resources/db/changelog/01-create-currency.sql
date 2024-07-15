@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS item (
+    id UUID PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price NUMERIC,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL,
+    updated_at TIMESTAMP WITH TIME ZONE,
+
+    CONSTRAINT name_unique UNIQUE (name)
+);
